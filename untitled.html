@@ -10,67 +10,78 @@
 <body>
     <main>
         <h1>Dice Roller</h1>
-
-
-        <h3>Player One             Player Two</h3>
-        
-
-        <label for="p1amountd10"></label>
-		<input type="text" id="p1amountd10" >
-        <label for="d10">D10</label>
-        <label for="p2amount10"></label>
-        <input type="text" id="p2amountd10" >
-        <br>
-
-
-        <label for="p1amountd8"></label>
-		<input type="text" id="p1amountd8" >
-        <label for="d8">D8</label>
-        <label for="p2amount8"></label>
-        <input type="text" id="p2amountd8" >
-        <br>
-
-        <label for="p1amountd6"></label>
-		<input type="text" id="p1amountd6" >
-        <label for="d6">D6</label>
-        <label for="p2amount6"></label>
-        <input type="text" id="p2amountd6">
-        <br>
-
-        <label for="p1amountd4"></label>
-		<input type="text" id="p1amountd4" >
-        <label for="d4">D4</label>
-        <label for="p2amount4"></label>
-        <input type="text" id="p2amountd4">
-        <br>
-
-
-        <label for="p1modifier"></label>
-		<input type="text" id="p1modifier" >
-        <label for="modifier">Modifier</label>
-        <label for="p2modifier"></label>
-        <input type="text" id="p2modifier">
-        <br>
-
-
-
-        <label for="showp1dice"></label>
-			<input type="text" id="showp1dice" disabled>
-        <label for="showp2dice">Dice</label>
-			<input type="text" id="showp2dice" disabled>
-        <br>
-
-
-        <label for="player1total"></label>
-			<input type="text" id="player1total" disabled>
-        <label for="player2total">Total</label>
-			<input type="text" id="player2total" disabled>
-        <br>
-        <input type="button" id="roll" value="Roll">
-
-
+        </div>
+        <div class="layout">
+            <div><h3>Player One</h3></div>  
+            <div></div>
+            <div><h3>Player Two</h3></div>
+            <div>
+                <input type="text" class = "input" id="p1amountd10">
+            </div>
+            <div>
+                <label for="d10">D10</label>
+            </div>
+            <div>
+             
+                <input type="text" class = "input" id="p2amountd10">
+            </div>
+            <div>
+             
+                <input type="text" class = "input" id="p1amountd8">
+            </div>
+            <div>
+                <label for="d8">D8</label> 
+            </div>
+            
+            <div>
+                <input type="text" class = "input" id="p2amountd8">
+            </div>
+            <div>
+                <input type="text" class = "input" id="p1amountd6">
+            </div>
+                <label for="d6">D6</label>
+            <div>
+                <input type="text" class = "input" id="p2amountd6">
+            </div>
+            <div>
+                <input type="text" class = "input" id="p1amountd4">
+            </div>
+            <div>
+                <label for="d4">D4</label>
+            </div>    
+            <div>
+                <input type="text" class = "input" id="p2amountd4">
+            </div>
+            <div>
+                <input type="text" class = "input" id="p1modifier">
+            </div>
+            <div>
+                <label for="modifier">Modifier</label>    
+            </div>
+            <div>
+                <input type="text" class = "input" id="p2modifier">
+            </div>
+            <div>
+                <input type="text" class = "input" id="showp1dice" disabled>
+            </div>
+            <div>
+                <label for="showp2dice">Dice</label>
+            </div>
+            <div>
+                <input type="text" class = "input" id="showp2dice" disabled>
+            </div>
+            <div>
+                <input type="text" class = "input" id="player1total" disabled>
+            </div>
+            <div>
+                <label for="player2total">Total</label>
+            </div>
+            <div>
+                <input type="text" class = "input" id="player2total" disabled>
+            </div>
+        </div>
+        <input class="button" type="button" class="button" id="roll" value="Roll">
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="diceroller.js"></script>
-
 </body>
