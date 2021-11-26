@@ -1,9 +1,7 @@
 
 h1{
     text-align: center;
-
 }
-
 
 .input{
     width: 75px;
@@ -13,14 +11,15 @@ h1{
     display: grid;
     grid-template-columns: auto 50px auto;
     grid-template-rows: 50px 50px 50px 50px 50px 50px 50px;
- 
     text-align: center;
-
+    color: aqua;
 }
 
 .button{
-   
+
     margin:0 auto;
     display:block;
-
+}
+body{
+    background-image: url("background2.jpg");
 }
