@@ -8,7 +8,7 @@
                 borderradius : "20px"
             },
             showDiceNumber: {
-                fontsize : "20px",
+                fontsize : "100%",
                 fontcolor : "black",
                 fontfamily: "Times New Roman"
             },
@@ -27,8 +27,39 @@
             let closeButton = $("<img>");
             let showDiceNumber = null
             let diceColor = settings.diceColor
+
+
+            let pictures = []
+        
+            const images = [
+                `pictures/${diceColor}/1.jpg`,
+                `pictures/${diceColor}/2.jpg`,
+                `pictures/${diceColor}/3.jpg`,
+                `pictures/${diceColor}/4.jpg`,
+                `pictures/${diceColor}/5.jpg`,
+                `pictures/${diceColor}/6.jpg`,
+                `pictures/${diceColor}/7.jpg`,
+                `pictures/${diceColor}/8.jpg`,
+                `pictures/${diceColor}/9.jpg`,
+                `pictures/${diceColor}/10.jpg`,
+                `pictures/${diceColor}/11.jpg`,
+                `pictures/${diceColor}/12.jpg`,
+                `pictures/${diceColor}/13.jpg`,
+                `pictures/${diceColor}/14.jpg`,
+                `pictures/${diceColor}/15.jpg`,
+                `pictures/${diceColor}/16.jpg`,
+                `pictures/${diceColor}/17.jpg`,
+                `pictures/${diceColor}/18.jpg`,
+                `pictures/${diceColor}/19.jpg`,
+                `pictures/${diceColor}/20.jpg`,
+            
+            ]
+            
             
             $(this).on("click", function() {
+                preload(images)
+
+                console.log(pictures)
                 timer = 0
                 show()
                 addBackGround()
@@ -36,6 +67,12 @@
                 exitButton()
                 myVar= setInterval(showPictures, 50)
             })
+
+            function preload(images) {
+                $(images).each(function () {
+                    $('<img />').attr('src',this).appendTo('body').css('display','none');
+                });
+            }
 
             function show(){
                 background.show()
@@ -73,9 +110,8 @@
             function showPictures(){
                 timer += 1
                 picNumber= Math.floor(Math.random() * 20) + 1 ;
-                //picNumber = 20
                 console.log(picNumber)
-                $(diceImage).attr("src", `pictures/${diceColor}/${picNumber}.jpg`);
+                $(diceImage).attr("src", images[picNumber-1]);
                 if(timer == 50){
                     clearInterval(myVar)
                     displayNumber(picNumber)
